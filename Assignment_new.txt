@@ -1,0 +1,38 @@
+import java.util.Scanner;
+ public class Test{
+       
+          int z=0;
+
+    public  void f1(int x,int y)
+    {
+        
+        if((y%2==0)&&(y%x==0))
+        {
+            int z=y/x;
+            
+            
+            System.out.print("Yes it is Even and is multiple of the first value  "+ z+"times");
+        }
+        else if ((y%2==0) &&(y%x!=0))
+        {
+            System.out.print(" Even but not a multiple of the first value");
+        }
+        else{
+             System.out.print("Neithe Even nor multiple of first value");
+        }
+        
+        
+        
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the first value");
+        int x=sc.nextInt();
+        System.out.print("Enter the second value");
+        int y=sc.nextInt();
+        Test obj=new Test();
+        obj.f1(x,y);
+    }
+    
+}
