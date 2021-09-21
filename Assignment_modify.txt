@@ -1,0 +1,28 @@
+import java.util.*;
+public class Test{
+    public static void main(String args[]) {
+        Scanner scanner=new Scanner(System.in);
+        System.out.print("Enter the number");
+        int num=scanner.nextInt();
+        int count = 0;
+
+        while (num != 0) {
+          
+          num /= 10;
+          ++count;
+        }
+        if (count==1 ){
+            System.out.println("Number of digit s are "+ count);
+        }
+        else if ( count%2 ==0 ){
+            System.out.println("Number of digits are "+ count+ " and it's square is "+ (count*count));
+            
+        }
+        else if ( count%3==0 ){
+            System.out.println("Number of digits are "+ count+ " and it's cube is "+ (count*count*count));
+        }
+        else{
+            System.out.println("Number of digits are "+ count+ " i.e ["+ (count-1) + "] and it's square is "+ (count-1)*(count-1));
+        }
+    }
+}
