@@ -1,0 +1,41 @@
+import java.util.Scanner;
+ public class Test{
+       
+          int count=0;
+
+    public  void f1(int num)
+    {
+     while (num != 0) {
+     
+      num =num/ 10;
+      ++count;
+    }
+    if(count%2==0)
+    {
+        int x=count*count;
+        System.out.print(x);
+        
+    
+    }
+    else if(count%3==0)
+    {
+        int z=count*count*count;
+        System.out.print(z);
+    }
+        else
+        {
+            System.out.print(1);
+        }
+        
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the number");
+        int num=sc.nextInt();
+        
+        Test obj=new Test();
+        obj.f1(num);
+    }
+    
+}
