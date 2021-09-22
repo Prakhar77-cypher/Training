@@ -1,0 +1,54 @@
+class Bentley{
+    
+    
+    public  void Car()
+    {
+        System.out.print("This Bentley");
+    }
+    
+    public int Cost()
+    {
+        System.out.print("Cost of one Bentley tyre is Rs2000\n");
+        System.out.print("Cost of five Bentley tyre is Rs10000\n ");
+         int x=(2000*5);
+         return x;
+    }
+}
+
+class Polo extends Bentley
+{
+     
+     
+     int y;
+    public  int Cost_1()
+    {
+        System.out.print("cost of one Polo tyre is Rs1000\n");
+     System.out.print("cost of five Polo tyre is Rs5000\n");
+       Bentley obj=new Bentley();
+         y=obj.Cost()+5000;
+        
+        return y;
+    }
+    
+    
+}
+  class Trailer extends Polo {
+      
+    public void Cost_2()
+    {
+        System.out.print("Cost of one Trailer tyre is 2000\n");
+        System.out.print("Cost of 16 Trailer tyre is 32000\n ");
+        Polo obj2=new Polo();
+        int z=obj2.Cost_1()+32000;
+     System.out.print("Total cost is"+" "+ "Rs" +z);
+     
+    
+    }
+}
+public class Test{
+    public static void main(String[] args)
+    {
+        Trailer obj1=new Trailer();
+        obj1.Cost_2();
+    }
+}
