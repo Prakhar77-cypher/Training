@@ -1,0 +1,48 @@
+import java.util.*;
+
+class Student{  
+int id;  
+String name;  
+Student(int id,String name){  
+this.id=id;  
+this.name=name;  
+}  
+}  
+class ID implements Comparator<Student>{  
+public int compare(Student s1,Student s2){  
+if(s1.id==s2.id)  
+return 0;  
+else if(s1.id>s2.id)  
+return 1;  
+else  
+return -1;  
+}  
+}  
+class Name implements Comparator<Student>{  
+public int compare(Student s1,Student s2){  
+return s1.name.compareTo(s2.name);  
+}  
+}  
+public class Simple{  
+public static void main(String args[]){  
+  
+ArrayList<Student> al=new ArrayList<Student>();  
+al.add(new Student(1,"Ram"));  
+al.add(new Student(9,"Gopal"));  
+al.add(new Student(3,"Shyam"));  
+  
+System.out.println("Sorting by Name");  
+  
+Collections.sort(al,new Name());  
+for(Student st: al){  
+System.out.println(st.id+" "+st.name);  
+}  
+  
+System.out.println("Sorting by Id");  
+  
+Collections.sort(al,new ID());  
+for(Student st: al){  
+System.out.println(st.id+" "+st.name);  
+}  
+}  
+}  
