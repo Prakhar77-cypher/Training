@@ -1,0 +1,8 @@
+x = {
+	 "One":"Two","Two":"One","Five":"Five"
+	 }
+
+y = sorted(x.items(), key=lambda x: x[1], reverse=False)
+
+t=dict(y)
+print(t)
