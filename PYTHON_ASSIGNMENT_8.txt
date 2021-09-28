@@ -1,0 +1,82 @@
+def mergeSort(myList):
+    if len(myList) > 1:
+        mid = len(myList) // 2
+        left = myList[:mid]
+        right = myList[mid:]
+
+        
+        mergeSort(left)
+        mergeSort(right)
+
+        
+        i = 0
+        j = 0
+        
+        
+        k = 0
+        
+        while i < len(left) and j < len(right):
+            if left[i] <= right[j]:
+             
+              myList[k] = left[i]
+              
+              i += 1
+            else:
+                myList[k] = right[j]
+                j += 1
+            
+            k += 1
+
+       
+        while i < len(left):
+            myList[k] = left[i]
+            i += 1
+            k += 1
+
+        while j < len(right):
+            myList[k]=right[j]
+            j += 1
+            k += 1
+
+
+
+print("Enter 1 for list")
+print("Enter 2 for set" )
+print("Enter 3 for dict")
+print("Enter 4 for tuple")
+
+x = int(input("Choose the value : "))
+
+lst = []
+ 
+
+
+
+if x==1:
+    n = int(input("Enter number of elements : "))
+    for i in range(0, n):
+        ele = input()
+        lst.append(ele)
+        mergeSort(lst)
+        print(lst)
+elif x==2:
+    Set={"Hello","Zelo"}
+    S=list(Set)
+    mergeSort(S)
+    print(S)
+    
+elif x==3:
+     Tuple = ("ABC","ZCA","DEF")
+     p=list(Tuple)
+     mergeSort(p)
+     print(p)
+elif x==4:
+    dict1={5:'apple', 2:'ball', 4: 'orange', 8: 'cat', 1: 'cricket'}
+    l=list(dict1.keys())
+    new_dict={}
+    mergeSort(l)
+    for i in range(len(l)):
+        new_dict[l[i]]=dict1[l[i]]
+
+print("New sorted Dictionary: ",new_dict)    
+    
