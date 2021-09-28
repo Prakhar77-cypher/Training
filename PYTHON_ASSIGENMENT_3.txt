@@ -1,0 +1,16 @@
+set1 = {19,28,97,89,63,101}
+  
+s = list(set1)
+
+list1 = []
+
+while s:
+    min = s[0]  
+    for x in s: 
+        if x > min:
+            min = x
+    list1.append(min)
+    s.remove(min)    
+
+t=list(list1)
+print(t)
