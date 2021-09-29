@@ -1,0 +1,66 @@
+def f1(lst):
+    p=({lst[i]:lst[i+1] for i in range (0,len(lst),10)})
+    def f2():
+        return p
+    return f2()
+    
+    
+def f3(a):
+    y = sorted(a.items(), key=lambda x: x[1], reverse=False)
+    def f4():
+        return y
+     
+    return f4()     
+        
+     
+        
+       
+        
+     
+    
+    
+    
+        
+
+    
+    
+        
+        
+    
+    
+        
+    
+        
+        
+
+
+print("Enter 1 for list")
+print("Enter 2 to convert list to Dictionary" )
+print("Enter 3 to sort dict")
+
+
+x = int(input("Choose the value : "))
+
+lst = []
+ 
+
+
+
+if x==1:
+    n = int(input("Enter number of elements : "))
+    for i in range(0, n):
+        ele = input()
+        lst.append(ele)
+        print(lst)
+print("Enter 2 to convert list to Dictionary" )
+y = int(input("Choose the value : "))
+if y==2:
+    a=f1(lst)
+    print(a)
+    
+    
+print("Enter 3 to sort dictionary")
+t = int(input("Enter the value : "))
+if t==3:
+    b=f3(a)
+    print(b)
