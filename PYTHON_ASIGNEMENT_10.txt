@@ -1,0 +1,283 @@
+def f1(u):
+    i=int(input("Enter the notes in 200 or 500: "))
+    if i==200:
+        b = int(input("Enter the unit of currency total there is 3 units of 200 in bank : "))
+        if b<=3:
+              global t
+              t=i*b
+              print(t)
+              v=u-t
+              print("Remanimg amount to withdraw is")
+              print(v)
+        
+        if v==0:
+            lst1=[]
+            lst1.append(n)
+            
+            print(lst1)
+        if v>0:
+                    
+                print("Rs"+str(v)+" "+"currency is not available in bank")
+                
+              
+    elif i==500:
+        c = int(input("Enter the unit of currency total there is 10 units 0f 500 in bank: "))
+        if c<=10:
+            global l
+            l=i*c
+            if l<=u:
+                print(l)
+                print("withdrawl money is "+str(l))
+                q=u-l
+            if q==0:
+                lst1=[]
+                lst1.append(n)
+                print(lst1)
+                
+            if q>0:
+                    
+                print("Rs"+ str(q)+" "+"currency is not available in bank")
+                
+def f2(u):
+    i=int(input("Enter the notes in 100 or 500: "))
+    if i==100:
+        b = int(input("Enter the unit of currency total there is 2 units of 100 in bank : "))
+        if b<=2:
+              global t
+              t=i*b
+              print(t)
+              v=u-t
+              print("Remanimg amount to withdraw is")
+              print(v)
+        if v==0:
+            lst1=[]
+            lst1.append(n)
+            print(lst1)      
+        if v>0:
+                    
+                print(str(v)+" "+"currency is not available in bank")
+                
+              
+    elif i==500:
+        c = int(input("Enter the unit of currency total there is 10 units 0f 500 in bank: "))
+        if c<=10:
+            global l
+            l=i*c
+            if l<=u:
+                print(l)
+                print("withdrawl money is "+str(l))
+                q=u-l
+            if q==0:
+                lst1=[]
+                lst1.append(n)
+                
+                print(lst1)
+                
+            if q>0:
+                    
+                print("Rs"+str(q)+" "+"currency is not available in bank")
+                                
+                
+                
+def f3(u):
+    i=int(input("Enter the notes in 100 or 500: "))
+    if i==100:
+        b = int(input("Enter the unit of currency total there is 2 units of 100 in bank : "))
+        if b<=2:
+              global t
+              t=i*b
+              print(t)
+              v=u-t
+              print("Remanimg amount to withdraw is")
+              print(v)
+        if v==0:
+            lst1=[]
+            lst1.append(n)
+            print(lst1)      
+        if v>0:
+                    
+                print(str(v)+" "+"currency is not available in bank")
+                
+              
+    elif i==200:
+        c = int(input("Enter the unit of currency total there is 3 units 0f 200 in bank: "))
+        if c<=3:
+            global l
+            l=i*c
+            if l<=u:
+                print(l)
+                print("withdrawl money is "+str(l))
+                q=u-l
+            if q==0:
+                lst1=[]
+                lst1.append(n)
+                print(lst1) 
+               
+            if q>0:
+                    
+                print(str(q)+" "+"currency is not available in bank")
+                                
+                                
+                
+            
+        
+        
+             
+              
+             
+        
+        
+                   
+                    
+                
+                    
+             
+                 
+    
+        
+    
+    
+                    
+                    
+                    
+                    
+                 
+     
+                
+
+    
+    
+    
+    
+    
+    
+    
+print("The total amount available in bank is")
+x,y,z=2,3,10
+amount=(100*x+200*y+500*z)
+print(amount)
+t=(amount*0.9)
+print("Total Amount that can be withdraw from bank is")
+print(t)
+
+
+print("Enter the amount to withdraw ")
+for i in range(3):
+    n = int(input("Enter the amount : "))
+    if n<=t:
+        print("Enter the unit out of following-100,200,500")
+    
+    
+    i=int(input("Enter : "))
+    if i==100:
+        if n%100==0:
+             a = int(input("Enter the unit of currency there is only 2 units of Rs 100 currency" ))
+             if a<=2:
+                 m=i*a
+                 print(m)
+                 print(str(m) + "amount has been withdraw")
+                 u=n-m
+                 print("Remanimg amount to withdraw is")
+                 print(u)
+                 if m<n:
+                      f1(u)
+        else:
+                  print("Not possible to withdraw")
+                  print("Press 7 to update the withdrwal amount to whole number")
+                  i1=int(input("Enter : "))
+                  if i1==7:
+                       n=n+ 100 - n % 100
+                       print("Withdraw "+str(n)+ "from bank")
+                       a = int(input("Enter the unit of currency there is only 2 units of Rs 100 currency : "))
+                       if a<=2:
+                           
+                           m=i*a
+                           print(m)
+                           print(str(m) + "amount has been withdraw")
+                           u=n-m
+                           print("Remanimg amount to withdraw is")
+                           print(u)
+                           if m<n:
+                                f1(u)              
+                        
+    elif i==200:
+             if n%100==0:
+                 a = int(input("Enter the unit of currency there is only 3 units of Rs 200 currency  : "))
+                 if a<=2:
+                     m=i*a
+                     print(m)
+                     print(str(m) + "amount has been withdraw")
+                     u=n-m
+                     print("Remanimg amount to withdraw is")
+                     print(u)
+                     if m<n:
+                         f2(u)             
+                     
+             else:
+                  print("Not possible to withdraw")
+                  print("Press 7 to update the withdrwal amount to whole number")
+                  i1=int(input("Enter : "))
+                  if i1==7:
+                       n=n+ 100 - n % 100
+                       print("Withdraw "+str(n)+ "from bank")
+                       a = int(input("Enter the unit of currency there is only 3 units of Rs 200 currency : "))
+                       if a<=3:
+                           
+                           m=i*a
+                           print(m)
+                           print(str(m) + "amount has been withdraw")
+                           u=n-m
+                           print("Remanimg amount to withdraw is")
+                           print(u)
+                           if m<n:
+                                f2(u)              
+                     
+    elif i==500:
+             if n%100==0:
+                 a = int(input("Enter the unit of currency there is only 10 units of Rs 500 currency : "))
+                 if a<=10:
+                     m=i*a
+                     print(m)
+                     print(str(m) + "amount has been withdraw")
+                     u=n-m
+                     print("Remanimg amount to withdraw is")
+                     print(u)
+                     if m<n:
+                         f3(u)             
+                     
+             else:
+                  print("Not possible to withdraw")
+                  print("Press 7 to update the withdrwal amount to whole number")
+                  i1=int(input("Enter : "))
+                  if i1==7:
+                       n=n+ 100 - n % 100
+                       print("Withdraw "+str(n)+ "from bank")
+                       a = int(input("Enter the unit of currency there is only 10 units of Rs 500 currency : "))
+                       if a<=10:
+                           
+                           m=i*a
+                           print(m)
+                           print(str(m) + "amount has been withdraw")
+                           u=n-m
+                           print("Remanimg amount to withdraw is")
+                           print(u)
+                           if m<n:
+                                f3(u)
+                
+    
+             
+
+
+
+
+
+
+         
+            
+            
+                           
+                           
+                        
+         
+                     
+                     
